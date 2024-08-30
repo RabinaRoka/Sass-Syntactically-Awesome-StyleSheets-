@@ -1,0 +1,12 @@
+// Initialize the index variable
+$j: 1;
+
+// Use the @while directive to loop through and create classes
+@while $j <= 5 {
+  .text-#{$j} {
+    font-size: 15px * $j;
+  }
+
+  // Increment the index to avoid an infinite loop
+  $j: $j + 1;
+}
